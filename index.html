@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>StressTrack</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <!-- Favicon for the website -->
+  <link rel="shortcut icon" href="elon-tesla-2.jpg" alt="StressTrack Favicon">
+
+</head>
+
+<body>
+  <div id="container">
+    <!-- Heading for the website -->
+    <h1>Contribute to world stress count</h1>
+
+    <!-- Button for incrementing the stress count -->
+    <button onmousedown="sound1.play()" onclick="increment()" class="circle">STRESS</button>
+
+    <!-- Heading for the contribution count -->
+    <h3>Your contribution</h3>
+    <h3 id="root"></h3>
+  </div>
+
+  <script>
+    // Creating an audio object for the sound effect
+    var sound1 = new Audio();
+    sound1.src = "Oof - Roblox - QuickSounds.com.mp3";
+
+    var data = 0;
+    // Displaying the initial contribution count
+    document.getElementById("root").innerText = data;
+
+    // Function to increment the contribution count
+    function increment() {
+      data = data + 1;
+      document.getElementById("root").innerText = data;
+    }
+  </script>
+</body>
+
+</html>
